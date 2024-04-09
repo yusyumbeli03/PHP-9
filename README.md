@@ -10,12 +10,12 @@
 
 ![table1](screens/1.jpg) 
 ```sql
-CREATE TABLE `users` (
+CREATE TABLE `comments` (
   `id` int NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `surname` varchar(30) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `user_id` int NOT NULL,
+  `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 ```
 ## Структура таблицы comments:
 1. id (integer) — primary
@@ -25,10 +25,11 @@ CREATE TABLE `users` (
 ![table1](screens/2.jpg)
 
 ```sql
-CREATE TABLE `comments` (
+CREATE TABLE `users` (
   `id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `comment` text NOT NULL
+  `name` varchar(30) NOT NULL,
+  `surname` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
 ## Также создана связь между таблицами
